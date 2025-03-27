@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../../components/Layouts/MainLayout";
 import Lorem from "../../components/Layouts/Lorem";
 import ErrorPage from "../../components/Error";
+import AboutUs from "../../components/About";
 
 export const router = [
     {
@@ -14,13 +15,13 @@ export const router = [
         children: [
             {
                 index: true,
-                element: <Lorem /> /* Buraya Homepage içerisinde yazılan komponentlerin birleşimi gelecek <HomepageLayout/>*/
+                element: <AboutUs /> /* Buraya Homepage içerisinde yazılan komponentlerin birleşimi gelecek <HomepageLayout/>*/
             },
             {
                 name: 'About Us',
                 link: '/about-us',
                 path: 'about-us',
-                element: <Lorem />, /* <AboutUs/> */
+                element: {/* <AboutUs /> */}, /* <AboutUs/> */
                 // breadcrumb: ''
             },
             {
